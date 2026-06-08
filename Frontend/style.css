@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #eef3fb;
+}
+
+/* LOGIN PAGE */
+.login-page {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 390px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #2563eb;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #1d4ed8;
+}
+
+#error {
+    color: red;
+    margin-top: 15px;
+}
+
+.demo {
+    margin-top: 20px;
+    font-size: 13px;
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 10px;
+    color: #334155;
+}
+
+/* DASHBOARD */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #0f172a;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+    color: #60a5fa;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sidebar a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.sidebar button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+}
+
+.main {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+.topbar {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    margin-bottom: 8px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    color: #1e3a8a;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.panel h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.form-grid input,
+.form-grid select {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    border-color: #2563eb;
+}
+
+.btn-row {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button.danger {
+    background: #ef4444;
+}
+
+button.danger:hover {
+    background: #dc2626;
+}
+
+button.clear {
+    background: #64748b;
+}
+
+#msg,
+#accountMsg {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+    background: #eff6ff;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .cards,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>EMS</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Employees</a>
+    <a href="#">Account</a>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <h1 id="welcomeText">Welcome</h1>
+        <p id="roleText"></p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Records</h3>
+            <h2 id="totalCount">0</h2>
+        </div>
+        <div class="card">
+            <h3>Your Role</h3>
+            <h2 id="roleCard">-</h2>
+        </div>
+        <div class="card">
+            <h3>Status</h3>
+            <h2>Active</h2>
+        </div>
+    </div>
+
+    <div class="panel" id="formSection">
+        <h2>Add / Update Employee</h2>
+
+        <div class="form-grid">
+            <input type="number" id="empId" placeholder="Employee ID">
+            <input type="text" id="empName" placeholder="Name">
+            <input type="email" id="empEmail" placeholder="Email">
+            <input type="text" id="empDepartment" placeholder="Department">
+            <input type="number" id="empSalary" placeholder="Salary">
+
+            <select id="empRole">
+                <option value="Admin">Admin</option>
+                <option value="HR">HR</option>
+                <option value="Manager">Manager</option>
+                <option value="Employee">Employee</option>
+            </select>
+
+            <input type="text" id="empPassword" placeholder="Password">
+        </div>
+
+        <div class="btn-row">
+            <button onclick="addEmployee()">Add</button>
+            <button onclick="updateEmployee()">Update</button>
+            <button id="deleteBtn" class="danger" onclick="deleteEmployee()">Delete</button>
+            <button class="clear" onclick="clearForm()">Clear</button>
+        </div>
+
+        <p id="msg"></p>
+    </div>
+
+    <div class="panel">
+        <h2>My Account Settings</h2>
+
+        <div class="form-grid">
+            <input type="password" id="oldPassword" placeholder="Old Password">
+            <input type="password" id="newPassword" placeholder="New Password">
+            <button onclick="changePassword()">Change Password</button>
+
+            <input type="email" id="newEmail" placeholder="New Email">
+            <input type="password" id="emailPassword" placeholder="Current Password">
+            <button onclick="changeEmail()">Change Email</button>
+        </div>
+
+        <p id="accountMsg"></p>
+    </div>
+
+    <div class="panel">
+        <h2>Employee Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
